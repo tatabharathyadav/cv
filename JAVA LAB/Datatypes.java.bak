@@ -1,0 +1,21 @@
+import java.io.*;
+class Datatypes
+{
+ int a;
+ float b;
+ char c;
+ short d;
+ Boolean e;
+ double f;
+ Byte g;
+ public static void main(String args[])
+ {
+   system.out.println("the value of a is"+a);
+   system.out.println("the value of b is"+b);
+   system.out.println("the value of c is"+c);
+   system.out.println("the value of d is"+d);
+   system.out.println("the value of e is"+e);
+   system.out.println("the value of f is"+f);
+   system.out.println("the value of g is"+g);
+ }
+}
