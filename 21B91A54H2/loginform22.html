@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>login form</title>
+<style>
+body
+{
+ background-color:lightblue;
+}
+td
+{
+  color:maroon;
+}
+</style>
+<script language="javascript">
+function validate()
+{ 
+  var nam=document.f1.uname.value;
+  if(nam=="")
+  {
+    alert("please enter valid username");
+    document.f1.uname.focus;
+    return false;
+  }
+  var pwd=document.f1.pass.value;
+  if(pwd=="")
+  {
+     alert("please enter valid password");
+     document.f1.pass.focus;
+     return false;
+  }
+}
+</script>
+</head>
+<body>
+<center>
+<h1>LOGIN FORM</h1>
+<br>
+<br>
+<table border="1">
+<tr>
+<form name="f1" action="scripting.php" method="post" onsubmit="javascript:return validate()">
+<td><label>USERNAME:</label></td>
+<td><input type="text" name="uname"></td>
+</tr>
+<tr>
+<td><label>PASSWORD:</label></td>
+<td><input type="password" name="pass"></td><br><br>
+</tr>
+<tr>
+
+<td align="center"><input type="submit" value="signin"></td>
+<td align="center"><input type="reset" value="clear"></td>
+</tr>
+</form>
+</center>
+</table>
+</body>
