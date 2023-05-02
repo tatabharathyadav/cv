@@ -1,6 +1,24 @@
 <html>
 <head>
-<title> User Registration Page</title>
+<title>Registration Page</title>
+<style>
+body
+{
+ background-color:lightblue;
+}
+td
+{
+  color:maroon;
+}
+table
+{
+  background-color:lightpink;
+}
+h2
+{
+ color:blue;
+}
+</style>
 <script language="javascript">
 function validate()
 {
@@ -39,29 +57,28 @@ return false;
 <body>
 <br/><br/><br/>
  <center>
-<form name="f1" action="insert.php" method="post" onsubmit="javascript:return 
-validate()">
+<form name="f1" action="insert.php" method="post" onsubmit="javascript:return validate()">
 <table border="3" cellpadding="0" cellspacing="0">
 <tr>
 <td>
 <table cellspacing="10">
 <tr>
- <td colspan="2" align="center"><h2><u>User Registration Form</u></h2></td>
+ <td colspan="2" align="center"><h2><u>Registration Form</u></h2></td>
  </tr>
 <tr>
- <td> User Name</td>
+ <td> User Name:</td>
  <td><input type="text" name="uname" size="50"></td>
 </tr>
 <tr>
- <td> Password</td>
+ <td> Password:</td>
  <td><input type="password" name="pass" size="50"></td>
 </tr>
 <tr>
- <td> E-mail</td>
+ <td> E-mail:</td>
  <td><input type="text" name="email" size="50"></td>
 </tr>
 <tr>
- <td> Phone</td>
+ <td> Phone:</td>
  <td><input type="text" name="phone" size="15"></td>
 </tr>
 <tr>
