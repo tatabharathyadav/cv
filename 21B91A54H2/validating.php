@@ -2,7 +2,7 @@
 $server="127.0.0.1";
     $user="BHARATH";
     $pass="BHARATH";
-    $dbname="bharath";
+    $dbname="yadav";
     $con =mysqli_connect($server,$user,$pass,$dbname);
     if(!$con)
     {
@@ -11,7 +11,7 @@ if(isset($_POST['uname']))
 {
 $uname=$_POST['uname'];
 $pass=$_POST['pass'];
-$query = "select * from registration where uname='$uname' and pass ='$pass'";
+$query = "select * from registarting where uname='$uname' and pass ='$pass'";
 $res = mysqli_query($con,$query);
 $count=mysqli_num_rows($res);
 if($count)

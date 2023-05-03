@@ -2,7 +2,7 @@
 $server="127.0.0.1";
     $user="BHARATH";
     $pass="BHARATH";
-    $dbname="bharath";
+    $dbname="yadav";
     $con =mysqli_connect($server,$user,$pass,$dbname);
     if(!$con)
     {
@@ -13,7 +13,7 @@ $uname=$_POST['uname'];
 $pass=$_POST['pass'];
 $email=$_POST['email'];
 $phno=(float)$_POST['phone'];
-$query = "INSERT INTO registration VALUES ('$uname', '$pass', '$email', '$phno')";
+$query = "INSERT INTO registarting VALUES ('$uname', '$pass', '$email', '$phno')";
 $res = mysqli_query($con,$query);
 if($res)
 {

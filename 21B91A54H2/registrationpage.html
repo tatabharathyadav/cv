@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>
+            REGISTRATION PAGE
+        </title>
+        <style>
+            table
+            {
+                background-color:skyblue;
+            }
+            body
+            {
+                background-color: rgb(255, 213, 232);
+            }
+            td{
+                color:maroon;
+            }
+        </style>
+        <script language="javascript">
+            function validate()
+            {
+                var nam=document.f1.uname.value;
+                if(nam=="")
+                {
+                    alert("please enter valid name");
+                    document.f1.uname.focus;
+                    return false;
+                }
+                var pwd=document.f1.pass.value;
+                if(pwd=="")
+                {
+                    alert("please enter valid password");
+                    document.f1.pass.focus;
+                    return false;
+                }
+                var mail=document.f1.email.value;
+                if(mail=="")
+                {
+                    alert("please enter valid email");
+                    document.f1.email.focus;
+                    return false;
+                }
+                var number=document.f1.phone.value;
+                len=number.length;
+                if(number=="" || len!=10)
+                {
+                    alert("please enter valid phone number or it should be strictly 10 digits");
+                    document.f1.phone.focus;
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <br>
+        <br>
+        <br>
+        <center>
+            <form name="f1" action="inserting.php" method="post" onsubmit="javascript:return validate()">
+                <table border="3" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <table  cellspacing="10">
+                    <tr>
+                    <td colspan="2" align="center"><h2><u>User Registration Form</u></h2></td>
+                    </tr>
+                    <tr>
+                    <td>User Name</td>
+                    <td><input type="text" name="uname" size="50"></td>
+                    </tr>
+                    <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="pass" size="50"></td>
+                    </tr>
+                    <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" size="50"></td>
+                    </tr>
+                    <tr>
+                    <td>Phno</td>
+                    <td><input type="number" name="phone" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" value="submit"></td>
+                    </tr>
+                </table>
+                </td>
+                </tr>
+                </table>
+                </form>
+        </center>
+    </body>
+</html>
