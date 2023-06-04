@@ -1,7 +1,7 @@
 
 [![MasterHead](https://i.pinimg.com/originals/88/e5/a4/88e5a4a52f0d7725c5e56364422b79fc.gif)](https://Bharath.io)
   
-<h1 align="center">Hi 👋, I'm Bharath yadav</h1>
+<h1 align="center">Hi 👋, I'm Tata Bharath yadav</h1>
 <h3 align="center">Student</h3>
 <img align="right" alt="coding" width="400" src="https://stemettes.org/zine/wp-content/uploads/sites/3/2021/09/giphy-13-1.gif">
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=tatabharathyadav&label=Profile%20views&color=0e75b6&style=flat" alt="tatabharathyadav" /> </p>
