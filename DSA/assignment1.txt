@@ -1,0 +1,594 @@
+
+FIRST-------------------------------------------------------
+package in.srkr.dsa1.oops;
+import java.util.Scanner;
+public class Assi1 
+{
+	public static void main(String[] args)
+	{
+		Car obj=new Car();
+		obj.get();
+		obj.set();
+		obj.depreciation();
+	}
+}
+	class Car
+	{
+		String make;
+		String model;
+		int year;
+		float price;
+		long deprecient;
+		float temp;
+		int noofyears=3;
+		public void get()
+		{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("enter car make,model,year,price respectively:");
+			make=sc.nextLine();
+			model=sc.nextLine();
+			year=sc.nextInt();
+			price=sc.nextFloat();
+		}
+		public void set()
+		{
+			System.out.println(make);
+			System.out.println(model);
+			System.out.println(year);
+			System.out.println(price);
+		}
+		public void depreciation()
+		{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("enter depreciation percentage");
+			deprecient=sc.nextLong();
+			temp=price;
+			for(int i=0;i<noofyears;i++)
+			temp=((100-deprecient)*temp)/100;
+			System.out.println("after depreciation = "+temp);
+			
+		}
+}
+
+
+SECOND------------------------------------------------------------------
+
+package in.srkr.dsa1.oops;
+
+public class Assi2
+{
+
+	public static void main(String[] args)
+	{
+		Hierarchy obj=new Hierarchy();
+		obj.circle();
+		obj.rectangle();
+		obj.triangle();
+	}
+}
+class Hierarchy
+{
+	public void circle()
+	{
+		float pi=3.14f;
+		float area;
+		float perimeter;
+		int r=5;
+		area=pi*r*r;
+		System.out.println("circlr area is "+area);
+		perimeter=2*pi*r;
+		System.out.println("circle perimeter is "+perimeter);
+	}
+	public void rectangle()
+	{
+		int length=5;
+		int breadth=3;
+		float area;
+		float perimeter;
+		area=length*breadth;
+		System.out.println("rectangle area "+area);
+		perimeter=2*(length+breadth);
+		System.out.println("rectangle perimeter is "+perimeter);
+	}
+	public void triangle()
+	{
+		int length=5;
+		int breadth=3;
+		int side=4;
+		double area;
+		float perimeter;
+		area=0.5*length*breadth;
+		System.out.println("triangle area "+area);
+		perimeter=side+length+breadth;
+		System.out.println("triangle perimeter is "+perimeter);
+	}
+}
+
+
+THIRD------------------------------------------------------------
+
+package in.srkr.dsa1.oops;
+import java.util.Scanner;
+public class Assi3 {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		BankAccount obj=new BankAccount();
+		obj.deposite();
+        obj.withdraw();
+	}
+
+}
+class BankAccount
+{
+	long accountNumber;
+	String holderName;
+	long balance;
+	long actualAmount=50;
+	public void deposite()
+	{
+		System.out.print("enter amount to be deposite:");
+		Scanner sc=new Scanner(System.in);
+		long amount=sc.nextLong();
+		actualAmount=actualAmount+amount;
+		System.out.println("your account has:"+actualAmount+" "+"rupees");
+	}
+	public void withdraw()
+	{
+		System.out.print("enter amount to be withdraw:");
+		Scanner sc=new Scanner(System.in);
+		long withdrawAmount=sc.nextLong();
+		actualAmount=actualAmount-withdrawAmount;
+		System.out.println("your account has:"+actualAmount+" "+"rupees");
+	}
+	
+}
+
+
+FOURTH----------------------------------
+
+package in.srkr.dsa1.oops;
+
+import java.util.Arrays;
+
+public class Assi4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Library obj2=new Library();
+		obj2.display();
+		Book obj=new Book();
+		obj.addBooks();
+		Members obj1=new Members();
+		obj1.lendBooks();
+	}
+
+}
+class Book
+{
+	public void addBooks()
+	{ 
+		String[] arr=new String[5];
+		arr[0]="co";
+		arr[1]="daa";
+		arr[2]="java";
+		for(int i=0;i<arr.length;i++)
+		{
+		System.out.println(arr[i]);
+		}
+		System.out.println("currently available books are:"+Arrays.toString(arr));
+		int num=3;
+		String a="ds";
+		String b="mp";
+		arr[num++]=a;
+		arr[num++]=b;
+		for(int i=0;i<arr.length;i++)
+		{
+		System.out.println(arr[i]);
+		}
+		System.out.println("after adding total books are "+Arrays.toString(arr));
+	}
+}
+class Members
+{
+	public void lendBooks()
+	{ 
+		String[] arr=new String[5];
+		arr[0]="co";
+		arr[1]="daa";
+		arr[2]="java";
+		arr[3]="che";
+		arr[4]="phy";
+		for(int i=0;i<arr.length;i++)
+		{
+		System.out.println(arr[i]);
+		}
+		System.out.println("currently available books are:"+Arrays.toString(arr));
+		int num=4;
+		String a="null";
+		String b="null";
+		arr[num--]=a;
+		arr[num--]=b;
+		for(int i=0;i<arr.length;i++)
+		{
+		System.out.println(arr[i]);
+		}
+		System.out.println("after lending total books are "+Arrays.toString(arr));
+	}
+}
+class Library
+{
+	public void display()
+	{
+		String[] arr=new String[7];
+		arr[0]="co";
+		arr[1]="daa";
+		arr[2]="java";
+		arr[3]="che";
+		arr[4]="phy";
+		arr[5]="ds";
+		arr[6]="mp";
+		for(int i=0;i<arr.length;i++)
+		{
+		System.out.println(arr[i]);
+		}
+		System.out.println("total available books are:"+Arrays.toString(arr));
+	}
+}
+
+
+
+
+
+
+FIFTH---------------------------
+
+
+
+package in.srkr.dsa1.oops;
+import java.util.Scanner;
+public class Assi5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee obj=new Employee();
+		obj.bonus();
+	}
+
+}
+class Employee
+{
+	String name;
+	long empId;
+	float salary;
+	float bonus;
+	int noOfYears;
+	public void bonus()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter name,id,salary,bonus,number of years of an employee");
+		name=sc.nextLine();
+		empId=sc.nextLong();
+		salary=sc.nextFloat();
+		bonus=sc.nextFloat();
+		noOfYears=sc.nextInt();
+		salary=salary+((bonus*10)*noOfYears);
+		System.out.println("salary after adding bonous is:"+salary);
+	}
+	
+}
+
+
+SIXTH--------------------------------------
+
+
+package in.srkr.dsa1.oops;
+
+import java.util.Arrays;
+
+public class Assi6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       Animal obj=new Animal();
+       obj.feed();
+       ZooKeeper obj1=new ZooKeeper();
+       obj1.add();
+       Zoo obj2=new Zoo();
+       obj2.display();
+	}
+}
+class Animal
+{
+	public void feed()
+	{
+		String animals[]= {"tiger","cat","dog"};
+		String food[]= {"meat","milk","rice"};
+		//animals=food;
+		
+		for(int i=0;i<animals.length;i++)
+		{
+		System.out.println(animals[i]);
+		}
+		for(int i=0;i<animals.length;i++)
+		{
+		System.out.println(food[i]);
+		}
+	}
+}
+class ZooKeeper
+{
+	public void add()
+	{
+		String animals[]=new String[5];
+		animals[0]="tiger";
+		animals[1]="cat";
+		animals[2]="dog";
+		System.out.println("Before adding animlas are:"+Arrays.toString(animals));
+		int count=3;
+		String a="ziraffe";
+		String b="cheetha";
+		animals[count++]=a;
+		animals[count++]=b;
+		System.out.println("After adding animals are:"+Arrays.toString(animals));
+     }
+}
+class Zoo
+{
+	public void display()
+	{
+		String animals[]=new String[5];
+		animals[0]="tiger";
+		animals[1]="cat";
+		animals[2]="dog";
+		animals[3]="ziraffe";
+		animals[4]="cheetha";
+		System.out.println("Animlas present in the zoo are:"+Arrays.toString(animals));
+	}
+}
+
+
+
+
+SEVENTH--------------------------------
+
+
+
+package in.srkr.dsa1.oops;
+import java.util.Scanner;
+public class Assi7 {
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+      Stud obj=new Stud();
+      obj.average();
+	}
+}
+class Stud
+{
+	String name;
+	int rollNo;
+	int grade;
+	int sum=0;
+	double avg;
+	public void average()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter number of students for grades");
+		int n=sc.nextInt();
+		int arr[]=new int[10];
+		System.out.println("enter the grades");
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		System.out.println("Grades are:");
+		for(int i=0;i<n;i++)
+		{
+			System.out.println(arr[i]);
+		}
+		for(int i=0;i<n;i++)
+		{
+			sum=sum+arr[i];
+		}
+		System.out.println("Grades average is :");
+		System.out.println(sum);
+		avg=sum/n;
+		System.out.println(avg);
+	}
+	}
+
+
+
+
+
+EIGTH--------------------------------
+
+
+
+package in.srkr.dsa1.oops;
+import java.util.Scanner;
+public class Assi8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Ca obj=new Ca ();
+        obj.c();
+        Vehicle obj1=new Vehicle();
+        obj1.info();
+	}
+
+}
+class Ca
+{
+	public void c()
+	{
+		float miliage;
+		float noOfKm;
+		float noOfLitersPetrolConsumed;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter number of km:");
+		noOfKm=sc.nextFloat();
+		System.out.println("enter number of liters of petrol consumed:");
+		noOfLitersPetrolConsumed=sc.nextFloat();
+		miliage=noOfKm/noOfLitersPetrolConsumed;
+		float efficiency=miliage*10;
+		System.out.println("efficiency:"+efficiency);
+		if(miliage>10)
+		{
+			System.out.println("efficient");
+		}
+		else
+		{
+			System.out.println("not an efficient");
+		}
+	}
+}
+class Vehicle
+{
+	public void info()
+	{
+		System.out.println("shift,2013 model,500000/-");
+	}
+}
+
+
+
+NINTH----------------------------------------------
+
+
+
+package in.srkr.dsa1.oops;
+import java.util.Scanner;
+public class Assi9 
+{
+	public static void main(String args[])
+	{
+		Bank obj=new Bank();
+		obj.addAccount();
+		obj.removeAccount();
+	}
+}
+class Bank
+{
+	String name;
+	int age;
+	long phoneNo;
+	int password;
+	float amount;
+	public void addAccount()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter name:");
+		name=sc.nextLine();
+		System.out.println("enter age:");
+		age=sc.nextInt();
+		System.out.println("enter phone number:");
+		phoneNo=sc.nextLong();
+		System.out.println("enter password:");
+		password=sc.nextInt();
+		System.out.println("deposite amount to start:");
+		amount=sc.nextFloat();
+		System.out.println("Account created Successfully");
+	}
+	public void removeAccount()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter name:");
+		name=sc.nextLine();
+		System.out.println("enter password:");
+		password=sc.nextInt();
+		System.out.println("Account removed Successfully");
+	}
+}
+
+
+
+
+
+
+
+
+
+TENTH-------------------------------
+
+package in.srkr.dsa1.oops;
+import java.util.Scanner;
+public class Assi10 {
+
+	public static void main(String[] args) {
+        Ticket obj3=new Ticket();
+        obj3.cost();
+        Movie obj1=new Movie();
+        obj1.booking();
+        Theater obj2=new Theater();
+        obj2.seating();
+	}
+
+}
+class Movie
+{
+	public void booking()
+	{
+		System.out.println("click on pay amount");
+		System.out.println("Ticket booked Successfully");
+	}
+}
+class Theater
+{
+	public void seating()
+	{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter seat number:");
+	int number=sc.nextInt();
+	if(number<=10)
+	{
+		System.out.println("sit in first row");
+		System.out.println("THANK YOU");
+	}
+	else if(20<=number && number>10)
+	{
+		System.out.println("sit in second row");
+		System.out.println("THANK YOU");
+	}
+	else if(30<=number && number>20)
+	{
+		System.out.println("sit in third row");
+		System.out.println("THANK YOU");
+	}
+	else
+	{
+		System.out.println("sit in balcony");
+		System.out.println("THANK YOU");
+	}
+	}
+}
+class Ticket
+{
+	public void cost()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter cinema name:");
+		String name=sc.nextLine();
+	
+		System.out.println("enter seating name:");
+		String seatingName=sc.nextLine();
+		String balcony=seatingName;
+		String maharaj=seatingName;
+		if(seatingName == balcony)
+		{
+			System.out.println("ticket price is 200/-");
+		}
+		else if(seatingName == maharaj)
+		{
+			System.out.println("ticket price is 150/-");
+		}
+		else
+		{
+			System.out.println("ticket price is 100/-");
+		}
+	}
+}
+

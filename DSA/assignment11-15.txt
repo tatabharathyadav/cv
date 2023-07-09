@@ -1,0 +1,322 @@
+ELEVEN------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+package in.srkr.dsa1.oops;
+import java.util.Scanner;
+public class Assi11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Product obj=new Product();
+		obj.value();
+	}
+
+}
+class Product
+{
+	int productNo;
+	float price;
+	int quantity;
+	float value;
+	int n;
+	int num;
+	float sum=0;
+	public void value()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter number of products:");
+		n=sc.nextInt();
+		for(int i=0;i<n;i++)
+		{
+			System.out.print("enter product number:");
+			productNo=sc.nextInt();
+			System.out.print("enter product price:");
+			price=sc.nextFloat();
+			System.out.print("enter quantity:");
+			quantity=sc.nextInt();
+			float value=price*quantity;
+			System.out.println("value of  product is:"+value);
+			 sum=sum+value;
+		}
+		System.out.println("Total value of products is:"+sum);
+	}
+}
+
+
+
+
+
+
+
+TWELEVE----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+package in.srkr.dsa1.oops;
+import java.util.Scanner;
+public class Assi12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TV obj=new TV();
+		Mobile obj2=new Mobile();
+		Laptop obj3=new Laptop();
+		obj.swith();
+		obj3.brightness();
+		obj2.volume();
+	}
+
+}
+class TV
+{
+	public void swith()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter whether u want to swith on or off");
+		String n=sc.nextLine();
+		String on=n;
+		String off=n;
+		if(n==on)
+		{
+			System.out.println("switch onned");
+		}
+		else
+		{
+			System.out.println("switch offed");
+		}
+	}
+}
+class Mobile
+{
+	public void volume()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter whether u want to volume increase or derease");
+		String n=sc.nextLine();
+		String increase=n;
+		String decrease=n;
+		if(n==increase)
+		{
+			System.out.println("volume increased");
+		}
+		else
+		{
+			System.out.println("volume decreased");
+		}
+	}
+}
+class Laptop
+{
+	public void brightness()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter whether u want to brightness increase or derease");
+		String n=sc.nextLine();
+		String increase=n;
+		String decrease=n;
+		if(n==increase)
+		{
+			System.out.println("brightness increased");
+		}
+		else
+		{
+			System.out.println("brightness decreased");
+		}
+	}
+}
+
+
+
+
+THIRTEEN---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+package in.srkr.dsa1.oops;
+
+import java.util.Scanner;
+
+public class Assi13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StudntRecord obj=new StudntRecord();
+		obj.average();
+	}
+
+}
+class StudntRecord
+{
+	String name;
+	int rollNo;
+	float marks;
+	int grade;
+	int sum=0;
+	double avg;
+	public void average()
+	{
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the name:");
+		String name=sc.nextLine();
+		System.out.println("enter the roll number");
+		int rollNo=sc.nextInt();
+		System.out.println("enter the number of subjects");
+		int n=sc.nextInt();
+		int arr[]=new int[10];
+		for(int i=0;i<n;i++)
+		{
+			System.out.println("enter the subject number");
+			arr[i]=sc.nextInt();
+			System.out.println("enter the marks");
+			arr[i]=sc.nextInt();
+			sum=sum+arr[i];
+		}
+		System.out.println("sum is :");
+		System.out.println(sum);
+		avg=sum/n;
+		System.out.println("average is :");
+		System.out.println(avg);
+		int arr1[]=new int[10];
+		System.out.println("enter the student grades");
+		for(int i=0;i<n;i++)
+		{
+			arr1[i]=sc.nextInt();
+		}
+		System.out.println("Grades are:");
+		for(int i=0;i<n;i++)
+		{
+			System.out.println(arr1[i]);
+		}
+	}
+	}
+
+
+
+FOURTEEN----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+package in.srkr.dsa1.oops;
+import java.util.Scanner;
+public class Assi14 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		User obj1=new User();
+		obj1.userDetails();
+		Post obj2=new Post();
+		obj2.posted();
+		Comment obj3=new Comment();
+	    obj3.commentAdded();
+	}
+
+}
+class User
+{
+	public void userDetails()
+	{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter name:");
+	String name=sc.nextLine();
+	System.out.println(name);
+	System.out.println("enter password:");
+	int pass=sc.nextInt();
+	System.out.println(pass);
+	
+	}
+}
+class Post
+{
+	public void posted()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter post:");
+		String name=sc.nextLine();
+		System.out.println("post entered");
+		System.out.println("THANK YOU");
+	}
+}
+class Comment
+{ 
+	public void commentAdded()
+	{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter comment:");
+	String name=sc.nextLine();
+	System.out.println("comment added");
+	System.out.println("THANK YOU");
+	}
+}
+
+
+
+
+
+
+FIFTEEN---------------------------------------------------------------------------------------------------------------------------------------------------
+---
+
+
+
+
+
+package in.srkr.dsa1.oops;
+
+import java.util.Scanner;
+import java.util.Arrays;
+public class Assi15 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Restaurant obj=new Restaurant();
+		obj.rest();
+	}
+
+}
+class Restaurant
+{
+	String name;
+	String menuItems;
+	int customerRating;
+	int sum=0;
+	float avg;
+	public void rest()
+	{
+		String arr[]=new String[5];
+		arr[0]="chicken";
+		arr[1]="mutton";
+		arr[2]="fish";
+		System.out.println("Menu items are:"+Arrays.toString(arr));
+		int n=3;
+		String a="peetha";
+		String b="pig";
+		arr[n++]=a;
+		arr[n++]=b;
+		System.out.println("Menu items after adding new items are:"+Arrays.toString(arr));
+		int arr1[]=new int[10];
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter no of people that are giving rating:");
+		int n1=sc.nextInt();
+		for(int i=0;i<n1;i++)
+		{
+			System.out.println("enter the RATING");
+			arr1[i]=sc.nextInt();
+			sum=sum+arr1[i];
+		}
+		//System.out.println("sum is :");
+		//System.out.println(sum);
+		avg=sum/n1;
+		System.out.println("average rating is :");
+		System.out.println(avg);
+	}
+}
+
+
+
+
