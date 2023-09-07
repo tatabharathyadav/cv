@@ -1,0 +1,28 @@
+<html>
+<body>
+<h2>map and filter functions</h2>
+<p>The map() method creates a new array by performing a function on each array 
+element.<br>
+The map() method does not change the original array.<br>
+The filter() method creates a new array with array elements that passes a test.
+</p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+document.getElementById("demo").innerHTML = numbers1;
+document.getElementById("demo1").innerHTML = numbers2;
+function myFunction(value, index, array) 
+{
+ return value * 2;
+}
+const over18 = numbers1.filter(myFunction1);
+document.getElementById("demo2").innerHTML = over18;
+function myFunction1(value, index, array) {
+ return value > 18;
+}
+</script>
+</body>
+</html>

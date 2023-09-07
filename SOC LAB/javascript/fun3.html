@@ -1,0 +1,27 @@
+<html>
+<body>
+<h2>compare function</h2>
+<p>By default, the sort() function sorts values Alphabetically<br>.
+However, if numbers are sorted as strings, "25" is bigger than "100",<br>
+because "2" is bigger than "1"<br>.
+Because of this, the sort() method will produce incorrect result when sorting numbers.<br>
+You can fix this by providing a compare function:
+function(a, b){return a - b}
+.</p>
+<button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+<p id="demo"></p>
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = points; 
+function myFunction1() {
+ points.sort();
+ document.getElementById("demo").innerHTML = points;
+}
+function myFunction2() {
+ points.sort(function(a, b){return a - b});
+ document.getElementById("demo").innerHTML = points;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<h2>Max and min number</h2>
+<p>You can use Math.min.apply to find the lowest number in an array:<br>
+You can use Math.max.apply to find the highest number in an array:</p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = myArrayMax(points);
+document.getElementById("demo1").innerHTML = myArrayMin(points);
+function myArrayMin(arr) {
+ return Math.min.apply(null, arr);
+}
+function myArrayMax(arr) {
+ return Math.max.apply(null, arr);
+}
+</script>
+</body>
+</html>

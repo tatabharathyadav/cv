@@ -1,0 +1,54 @@
+<html>
+    <head>
+<title>registration page</title>
+</head>
+<body>
+<center>
+    <tr>
+    <form action=""method="get">
+        <table frame="box"cell spacing="10">
+            <tr>
+        <td>LOGIN:</td>
+        <td><input TYPE="text"></td>
+        </tr>
+        <tr>
+        <td>PASSWORD:</td>
+        <td><input TYPE="PASSWORD"></td>
+        </tr>
+      <tr>
+        <td>ADDRESS:</td>
+        <td><input TYPE="ADDRESS"></td>
+        </tr>
+        <tr>
+        <td>EMAILID:</td>
+        <td><input TYPE="TEXT"></td>
+        </tr>
+        <tr>
+        <td>PHONE NUMBER:</td>
+        <td><input TYPE="TEXT"></td>
+        </tr>
+        <tr>
+        <td>GENDER:</td>
+        <td><input TYPE="radio" name="gender"value="male">MALE</td>
+        <td><input TYPE="radio" name="gender"value="FEmale">FEMALE</td>
+        </tr>
+      <tr>
+        <td>DATE:</td>
+        <td><input TYPE="DATE"></td>
+        </tr>
+        <tr>
+        <td>LANGUAGES:</td>
+        <td><input TYPE="checkbox"name="language"value="english">ENGLISH</td><br>
+         <td><input TYPE="checkbox"name="language"value="TELUGU">TELUGU</td><br>
+          <td><input TYPE="checkbox"name="LANGUAGE"value="HINDI">HINDI</td><br>
+           <td><input TYPE="checkbox"name="language"value="TAMIL">TAMIL</td><br>
+        </tr>
+        <center>
+        <tr>
+            <td><input type="SUBMIT"value="SUBMIT"></td>
+        </tr>
+        </center>
+    </form></table>
+</center>
+</body>
+</html>
