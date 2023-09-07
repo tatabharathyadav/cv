@@ -1,0 +1,6 @@
+create table constraints(sno number(10) constraint nn1 not null,sname char(10) unique,saddress varchar(20) not null,smarks number(8,2),sage integer);
+desc constraints;
+insert into constraints(sno,sname,saddress,smarks,sage) values(1,'bharath','bvrm',70,17);
+insert into constraints(sname,saddress,smarks,sage) values('bha','',70,17);
+insert into constraints(sno,sname,saddress,smarks,sage) values(2,'bharath','bvrm',70,17);
+select * from constraints;

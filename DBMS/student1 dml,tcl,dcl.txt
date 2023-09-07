@@ -1,0 +1,11 @@
+insert into student1(sno,sname,sadd,dob,sub1,sub2,sub3) values(5,'bhask1ara','bvma1','21-mar-1998',117,211,22);
+
+select * from student1;
+
+update student1 set total=sub1+sub2+sub3;
+SAVEPOINT b;
+delete from student1 where sno=2;
+ROLLBACK b;
+
+grant select on student1 to aidsh4;
+revoke select on student1 from aidsh4;+

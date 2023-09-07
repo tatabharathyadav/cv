@@ -1,0 +1,178 @@
+create table student(sname varchar(20),rollno number(10),dob date);
+desc student;
+alter table student add(address varchar(20),phone_number number(10));
+desc student;
+alter table student modify(address varchar2(40));
+desc student;
+alter table student drop(rollno);
+desc student;
+rename student to student10;
+truncate table student10;
+desc student10;
+drop table student10;
+desc student10;
+
+
+OUTPUT
+
+
+Error starting at line : 1 in command -
+create table student(sname varchar[20],rollno number[10],dob date)
+Error report -
+ORA-00906: missing left parenthesis
+00906. 00000 -  "missing left parenthesis"
+*Cause:    
+*Action:
+
+Table STUDENT created.
+
+Name   Null? Type         
+------ ----- ------------ 
+SNAME        VARCHAR2(20) 
+ROLLNO       NUMBER(10)   
+DOB          DATE         
+Name   Null? Type         
+------ ----- ------------ 
+SNAME        VARCHAR2(20) 
+ROLLNO       NUMBER(10)   
+DOB          DATE         
+Name   Null? Type         
+------ ----- ------------ 
+SNAME        VARCHAR2(20) 
+ROLLNO       NUMBER(10)   
+DOB          DATE         
+Name   Null? Type         
+------ ----- ------------ 
+SNAME        VARCHAR2(20) 
+ROLLNO       NUMBER(10)   
+DOB          DATE         
+
+Error starting at line : 1 in command -
+create table student(sname varchar(20),rollno number(10),dob date)
+Error report -
+ORA-00955: name is already used by an existing object
+00955. 00000 -  "name is already used by an existing object"
+*Cause:    
+*Action:
+Name   Null? Type         
+------ ----- ------------ 
+SNAME        VARCHAR2(20) 
+ROLLNO       NUMBER(10)   
+DOB          DATE         
+
+Table STUDENT altered.
+
+Name         Null? Type         
+------------ ----- ------------ 
+SNAME              VARCHAR2(20) 
+ROLLNO             NUMBER(10)   
+DOB                DATE         
+ADDRESS            VARCHAR2(20) 
+PHONE_NUMBER       NUMBER(10)   
+
+Error starting at line : 1 in command -
+create table student(sname varchar(20),rollno number(10),dob date)
+Error report -
+ORA-00955: name is already used by an existing object
+00955. 00000 -  "name is already used by an existing object"
+*Cause:    
+*Action:
+Name         Null? Type         
+------------ ----- ------------ 
+SNAME              VARCHAR2(20) 
+ROLLNO             NUMBER(10)   
+DOB                DATE         
+ADDRESS            VARCHAR2(20) 
+PHONE_NUMBER       NUMBER(10)   
+
+Error starting at line : 3 in command -
+alter table student add(address varchar(20),phone_number number(10))
+Error report -
+ORA-01430: column being added already exists in table
+01430. 00000 -  "column being added already exists in table"
+*Cause:    
+*Action:
+Name         Null? Type         
+------------ ----- ------------ 
+SNAME              VARCHAR2(20) 
+ROLLNO             NUMBER(10)   
+DOB                DATE         
+ADDRESS            VARCHAR2(20) 
+PHONE_NUMBER       NUMBER(10)   
+
+Table STUDENT altered.
+
+Name         Null? Type         
+------------ ----- ------------ 
+SNAME              VARCHAR2(20) 
+ROLLNO             NUMBER(10)   
+DOB                DATE         
+ADDRESS            VARCHAR2(40) 
+PHONE_NUMBER       NUMBER(10)   
+
+Error starting at line : 1 in command -
+create table student(sname varchar(20),rollno number(10),dob date)
+Error report -
+ORA-00955: name is already used by an existing object
+00955. 00000 -  "name is already used by an existing object"
+*Cause:    
+*Action:
+Name         Null? Type         
+------------ ----- ------------ 
+SNAME              VARCHAR2(20) 
+ROLLNO             NUMBER(10)   
+DOB                DATE         
+ADDRESS            VARCHAR2(40) 
+PHONE_NUMBER       NUMBER(10)   
+
+Error starting at line : 3 in command -
+alter table student add(address varchar(20),phone_number number(10))
+Error report -
+ORA-01430: column being added already exists in table
+01430. 00000 -  "column being added already exists in table"
+*Cause:    
+*Action:
+Name         Null? Type         
+------------ ----- ------------ 
+SNAME              VARCHAR2(20) 
+ROLLNO             NUMBER(10)   
+DOB                DATE         
+ADDRESS            VARCHAR2(40) 
+PHONE_NUMBER       NUMBER(10)   
+
+Table STUDENT altered.
+
+Name         Null? Type         
+------------ ----- ------------ 
+SNAME              VARCHAR2(20) 
+ROLLNO             NUMBER(10)   
+DOB                DATE         
+ADDRESS            VARCHAR2(40) 
+PHONE_NUMBER       NUMBER(10)   
+
+Table STUDENT altered.
+
+Name         Null? Type         
+------------ ----- ------------ 
+SNAME              VARCHAR2(20) 
+DOB                DATE         
+ADDRESS            VARCHAR2(40) 
+PHONE_NUMBER       NUMBER(10)   
+
+Table renamed.
+
+
+Table STUDENT10 truncated.
+
+Name         Null? Type         
+------------ ----- ------------ 
+SNAME              VARCHAR2(20) 
+DOB                DATE         
+ADDRESS            VARCHAR2(40) 
+PHONE_NUMBER       NUMBER(10)   
+
+Table STUDENT10 dropped.
+
+
+ERROR:
+ORA-04043: object student10 does not exist

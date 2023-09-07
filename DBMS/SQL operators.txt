@@ -1,0 +1,28 @@
+create table studenth2(st_id number(10) primary key, s_name varchar(20) , marks  number(10));
+desc studenth2;
+insert into studenth2(st_id,s_name,marks) values(101,'sumit',78);
+insert into studenth2(st_id,s_name,marks) values(102,'ashu',79);
+insert into studenth2(st_id,s_name,marks) values(103,'shreya',85);
+insert into studenth2(st_id,s_name,marks) values(104,'kuku',76);
+insert into studenth2(st_id,s_name,marks) values(105,'Twari',87);
+insert into studenth2(st_id,s_name,marks) values(106,'ramu',65);
+insert into studenth2(st_id,s_name,marks) values(107,'bharat',65);
+insert into studenth2(st_id,s_name,marks) values(108,'bharat',66);
+select * from studenth2;
+select s_name from studenth2 where marks=78 or marks=85 or marks=87;
+select s_name from studenth2 where marks not in(78,65,87);
+select s_name from studenth2 where marks<=78 or marks<=67 or marks<86;
+select s_name from studenth2 where marks< any(78,67,86);
+select s_name from studenth2 where marks> any(78,67,86);
+select s_name from studenth2 where marks< all(78,67,86);
+select s_name from  studenth2 where marks> all(78,67,86);
+
+select s_name st_id from studenth2 where st_id is null;
+select distinct(st_id) from studenth2;
+select * from studenth2 where s_name like '_a%';
+select * from studenth2 where st_id between 102 and 105;
+select * from studenth2 where st_id>106 or marks=65;
+select * from studenth2 where st_id>105 and marks=65;
+select * from studenth2 where not s_name='bharat';
+select * from studenth2 order by s_name;
+drop table studenth2;

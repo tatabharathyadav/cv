@@ -1,0 +1,24 @@
+CREATE table stud(sno NUMBER(4) CONSTRAINT nn2 not null,sname char(10) unique,saddress VARCHAR2(20) not null,smarks NUMBER(8,2),sage INTEGER);
+DESC  stud;
+INSERT into stud(sno,sname,saddress,smarks,sage) VALUES(1,'Simhadri','OGL',278,20);
+INSERT into stud(sno,sname,saddress,smarks,sage) VALUES(2,'mohan','KDP',298,20);
+INSERT into stud(sno,sname,saddress,smarks,sage) VALUES(3,'Bharath','TNK',285,19);
+INSERT into stud(sno,sname,saddress,smarks,sage) VALUES(4,'Sumanth','OGL',289,18);
+select *FROM stud;
+commit;
+create table emp1(eno number(10),ename char(10),sal number(10),check(sal>5000),age number(10) default 27);
+insert into emp1(eno,ename,sal)VALUES(11,'simhadri',70000);
+insert INTO emp1(eno,ename,sal)VALUES(12,'mohan',80000);
+INSERT INTO emp1(eno,ename,sal)VALUES(13,'bharath',75000);
+select *FROM emp1;
+
+create table dept(dno number(10) CONSTRAINT pk1 primary key,dept_name char(20),dept_loc VARCHAR2(20));
+INSERT INTO dept VALUES(1001,'it','srkr');
+insert into dept values(1002,'cse','srkr');
+insert into dept values(1003,'Aids','srkr');
+SELECT * FROM dept;
+create table emp(eno number(10) primary key,ename char(20),esal number(8,2),edesg char(10),dno number(10) references dept(dno));
+insert into emp values(101,'simhadri',70000,'facualty',1001);
+insert into emp values(102,'mohan',80000,'prof',1002);
+insert into emp values(103,'bharath',85000,'asstprof',1003);
+select *FROM dept d,emp e where d.dno=e.dno;
