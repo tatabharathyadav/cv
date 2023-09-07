@@ -1,0 +1,36 @@
+<!DOCTYPE book [
+<!ELEMENT book (bookinformation+)>
+<!ELEMENT bookinformation (titleofthebook,authorname,ISBNnumber,publishername,edition,price) >
+<!ELEMENT titleofthebook (#PCDATA) >
+<!ELEMENT authorname (#PCDATA) >
+<!ELEMENT ISBNnumber (#PCDATA) >
+<!ELEMENT publishername (#PCDATA) >
+<!ELEMENT edition (#PCDATA) >
+<!ELEMENT price (#PCDATA) >
+] >
+<book>
+<bookinformation>
+	<titleofthebook>webtechnologies</titleofthebook>
+	<authorname>bharath</authorname>
+	<ISBNnumber>15251542</ISBNnumber>
+	<publishername>pavan</publishername>
+	<edition>5th</edition>
+	<price>1000</price>
+</bookinformation>
+<bookinformation>
+	<titleofthebook>CO</titleofthebook>
+	<authorname>CHARAN</authorname>
+	<ISBNnumber>15251543</ISBNnumber>
+	<publishername>SPY</publishername>
+	<edition>6th</edition>
+	<price>2000</price>
+</bookinformation>
+<bookinformation>
+	<titleofthebook>DBMS</titleofthebook>
+	<authorname>AHAMAD</authorname>
+	<ISBNnumber>15251544</ISBNnumber>
+	<publishername>MANI</publishername>
+	<edition>7th</edition>
+	<price>3000</price>
+</bookinformation>
+</book>

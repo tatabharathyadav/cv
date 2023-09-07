@@ -1,0 +1,6 @@
+puts "enter height of a triangle"
+height=gets.chomp.to
+puts "enter base of a triangle"
+base=gets.chomp.to
+areaoftriangle=(height*base)/2
+puts "area of triangle is #{areaoftriangle}"
