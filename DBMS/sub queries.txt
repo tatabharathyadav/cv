@@ -1,0 +1,71 @@
+
+//correlated subquery
+
+
+
+create  table employeedetails (eid number(20) ,ename varchar(20),salary number(20),dno number(20) primary key);
+insert into employeedetails values(1,'vishnu',50000,'101');
+insert into employeedetails values(2,'varma',45000,'103');
+insert into employeedetails values(3,'sai',60000,'106');
+insert into employeedetails values(4,'bharat',70000,'107');
+insert into employeedetails values(5,'sumanth',60000,'104');
+select * from employeedetails;
+
+select * from employeedetails where salary in (select salary from employeedetails where salary >=55000); 
+
+create table departmentdetails (dno number(20) primary key,dname varchar(20));
+insert into departmentdetails values(101,'IT');
+insert into departmentdetails values(102,'CSE');
+insert into departmentdetails values(103,'ECE');
+insert into departmentdetails values(104,'EEE');
+insert into departmentdetails values(105,'CSD');
+select * from departmentdetails;
+
+select dno,dname from departmentdetails d where exists(select 1 from employeedetails e where e.dno=d.dno);
+
+select dno,dname from departmentdetails d where not exists(select 1 from employeedetails e where e.dno=d.dno);     
+
+
+
+
+//subquery
+
+create table studentdetails(s_id number(3),s_name varchar(10),s_address varchar(10));
+insert into studentdetails values(1,'bharath','rjy');
+insert into studentdetails values(2,'jay','vij');
+insert into studentdetails values(3,'vish','bhm');
+insert into studentdetails values(4,'spy','sisali');
+select * from studentdetails;
+select * from studentdetails where s_id in(select s_id from studentdetails where s_id<3);
+
+insert into student_new values where( select * from studentdetails where s_id>=2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------
+select *from weather;
+select w_date,city from (select * from weather where temp>35) where wind_speed>60;
+create table ongole_weather(Wdate date, wind_speed number(2),temp number(20));
+insert into ongole_weather (select a.w_date, a.wind_speed,a.temp from weather a where a.city='ongole');
+select * from ongole_weather;
+alter table ongole_weather add(wind_temp_ratio number(20));
+update  ongole_weather set wind_temp_ratio=wind_speed/temp where temp in(select temp from ongole_weather);
+delete from ongole_weather where temp in(select temp from ongole_weather where temp<38);
