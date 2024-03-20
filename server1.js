@@ -1,29 +1,3 @@
-// const express=require('express');
-// const dotEnv=require('dotenv');
-// const mongoose=require('mongoose');
-// const bodyParser=require('body-parser');
-// const app=express();
-// const PORT=process.env.PORT||5000;
-
-// //mongodb connection
-
-// dotEnv.config();
-// mongoose.connect(process.env.MONGO_URI)
-// .then(()=>
-// {
-//     console.log("mongodb connected successfully");
-// })
-// .catch((error)=>
-// {
-//     console.log(error);
-
-// })
-// app.listen(PORT,()=>
-// {
-//     console.log("server statred and running");
-// })
-
-
 const express = require('express');
 const dotEnv = require('dotenv');
 const mongoose = require('mongoose');
